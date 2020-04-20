@@ -1,0 +1,14 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+
+Entity evenParity is
+  Port(xVec:in std_logic_vector(3 downto 0);
+       yVec:out std_logic_vector(4 downto 0));
+     end entity;
+     
+     Architecture prototip of evenParity is
+       signal eslik:std_logic;
+       Begin
+         eslik<=xVec(0) xor xVec(1) xor xVec(2) xor xVec(3);
+         yVec<=xVec & eslik;
+       end prototip;
